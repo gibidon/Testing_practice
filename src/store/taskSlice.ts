@@ -63,15 +63,20 @@ export const {
 
 export default taskListSlice.reducer;
 
-export const tasksSelector = (state: RootState) => state.taskList.list;
-
+export const tasksSelector = (state: RootState) => {
+  console.log('lsit: ',state.taskList.list)
+  return state.taskList.list;
+}
 export const fullCount = (state: RootState) => state.taskList.list.length;
 
 export const completeCount = (state: RootState) =>
   state.taskList.list.filter((x) => x.done).length;
 
-export const uncompleteCount = (state: RootState) =>
-  state.taskList.list.filter((x) => !x.done).length;
+export const uncompleteCount = (state: RootState) =>{
+  return  state.taskList.list.filter((x) => !x.done).length;
 
+}
 export const getNotification = (state: RootState) =>
   state.taskList.notification
+
+export const completedTasks = (state:RootState) => state.taskList.list.filter(task => task.done)

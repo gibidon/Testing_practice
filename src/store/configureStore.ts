@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
 import taskListReducer from './taskSlice';
+import filterReducer from './filterSlice'
 import { loadState, saveState } from 'src/utils/persist';
 
 const persistedState = loadState();
 
 export const store = configureStore({
   reducer: {
-    taskList: taskListReducer
+    taskList: taskListReducer,
+    filters:filterReducer
   },
   devTools: true,
   preloadedState: persistedState,

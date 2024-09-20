@@ -6,9 +6,13 @@ type Props = {
   onToggle: (id: Task["id"]) => void;
 };
 
-export const List = ({ items, onDelete, onToggle }: Props) => (
+export const List = ({ items, onDelete, onToggle }: Props) => {
+  const itemsToRender = items.length <= 10 ? items : items.slice(0,9) 
+
+  return (
   <ul className="task-list tasks">
-    {items.map((item) => (
+    {/* {items.map((item) => ( */}
+    {itemsToRender.map((item) => (
       <Item
         {...item}
         key={item.id}
@@ -16,4 +20,5 @@ export const List = ({ items, onDelete, onToggle }: Props) => (
         onToggle={onToggle} />
     ))}
   </ul>
-);
+)
+}

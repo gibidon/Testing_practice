@@ -32,3 +32,17 @@ body {
 h3 {
     margin: 0 auto;
 }
+
+.for_visible{
+    visibility:hidden;
+    pointer-events: all;
+}
+
+
+.for_opacity {
+    opacity: 0;
+}
+
+.red {
+    color: red;
+}

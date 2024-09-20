@@ -1,7 +1,7 @@
 export const MAX_HEADER_LENGTH = 32;
 export const MIN_HEADER_LENGTH = 1;
 export const HEADER_LENGTH_ERROR_MESSAGE =
-  "Длина заголовка не должна превышать 32 символа";
+  "Длина заголовка не должна превышать 32 символа и не менее 1 символа";
 
 export const validateHeaderMax = (text: string) => {
   return text.length <= MAX_HEADER_LENGTH;

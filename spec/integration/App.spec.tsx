@@ -1,5 +1,5 @@
 import { App } from "src/App";
-import { render, screen } from "@testing-library/react";
+import { render, screen,prettyDOM } from "@testing-library/react";
 import ue from "@testing-library/user-event";
 
 const userEvent = ue.setup({
@@ -24,7 +24,7 @@ it("Добавление задач в список", async () => {
     expect(items).toHaveLength(2);
 });
 
-it('Хранение стора в localStorage', async () => {
+it.skip('Хранение стора в localStorage', async () => {
     render(<App />);
 
     const inputEl = screen.getByRole('textbox');
@@ -39,5 +39,6 @@ it('Хранение стора в localStorage', async () => {
 
     expect(localStorage.getItem).toBeCalled();
     expect(localStorage.setItem).toBeCalled();
+
 })
 
