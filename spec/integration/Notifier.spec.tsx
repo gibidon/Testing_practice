@@ -67,5 +67,6 @@ describe('Оповещение при вополнении задачи', () => 
         expect(blackoutElem).toBeInTheDocument()
     })
 
+    // через spyOn на React useEffect еще можно
     
 });

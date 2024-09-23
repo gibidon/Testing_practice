@@ -10,7 +10,7 @@ const EMPTY_STRING = ''
 describe('Элемент списка задач', () => {
     const userEvent = ue.setup({advanceTimers:jest.advanceTimersByTime})
 
-    test.skip('название не должно быть больше 32 символов',() => {
+    test('название не должно быть больше 32 символов',() => {
         const onDelete = jest.fn()
         const onToggle = jest.fn()
         
@@ -31,7 +31,7 @@ describe('Элемент списка задач', () => {
         expect(item.textContent).toBe(HEADER_LENGTH_ERROR_MESSAGE)
     });
 
-    test.skip('нельзя удалять невыполненные задачи',async() => {
+    test('нельзя удалять невыполненные задачи',async() => {
         const onDelete = jest.fn()
         const onToggle = jest.fn()
 
@@ -44,5 +44,27 @@ describe('Элемент списка задач', () => {
         expect(deleteBtn).toBeDisabled()
     });
 
+    it('заполняется корректно-через diffSnapshot',() => {
+        const onToggle = jest.fn()
+        const onDelete = jest.fn()
+
+        const {rerender,asFragment} = render(<Item header={NORMAL_STRING} id='6' done={true} onToggle={onToggle} onDelete={onDelete}/>)
+        const firstRender = asFragment()
+
+        rerender(<Item header={NORMAL_STRING + 'new'} id='7' done={true} onToggle={onToggle} onDelete={onDelete}/>)
+        const secondRender = asFragment()
+
+        expect(firstRender).toMatchDiffSnapshot(secondRender)
+    })
+    it('заполняется корректно-через snapshot',() => {
+        const onToggle = jest.fn()
+        const onDelete = jest.fn()
+
+        const {asFragment} = render(<Item header={NORMAL_STRING} id='6' done={true} onToggle={onToggle} onDelete={onDelete}/>)
+        const firstRender = asFragment()
+
+        expect(firstRender).toMatchSnapshot()
+    })
+   
     
 });
