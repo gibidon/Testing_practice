@@ -34,7 +34,7 @@ describe('Список задач', () => {
         expect(taskList).toHaveLength(2)
 
         await userEvent.click(onlyActiveTasksBtn)
-    
+ 
         rerender(<App/>)
         const newTaskList = screen.getAllByRole('listitem')
         expect(newTaskList).toHaveLength(5)        

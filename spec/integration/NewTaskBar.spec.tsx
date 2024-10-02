@@ -25,7 +25,7 @@ it.each([
   const inputEl = screen.getByRole("textbox");
   const hintEl = screen.getByTestId("input-hint-text");
   const addBtnEl = screen.getByRole("button");
-  await userEvent.keyboard('')
+  // await userEvent.keyboard('')
   await userEvent.clear(inputEl);
 
   if (text) {
