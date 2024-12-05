@@ -137,3 +137,14 @@
 
     border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
 }
+
+.onlyActiveTasksBtn {
+    min-width: 180px;
+    font-size:20px;
+    padding: 0.7rem 0.4rem;
+    border:1px solid grey;
+    border-radius: 8px;
+    background-color: inherit;
+    color: white;
+    font-weight: 600;
+}

@@ -9,14 +9,17 @@ type Props = {
 export const Notifier = ({ task, open, onClose }: Props) => {
     useEffect(() => {
         let timerId: NodeJS.Timeout;
-
+        console.log('applying setTimeout in useEffect')
         if (open) {
             timerId = setTimeout(() => {
                 onClose();
             }, 2000);
         }
 
-        return () => clearTimeout(timerId);
+        return () => {
+            console.log('applying setTimeout in useEffect')
+
+            clearTimeout(timerId)};
     }, [open]);
 
     if (!open) {
@@ -25,7 +28,7 @@ export const Notifier = ({ task, open, onClose }: Props) => {
 
     return(
         <div className="blackout">
-            <div className="notifier-wrapper">
+            <div className="notifier-wrapper" data-testid='notifier'>
                 {task}
             </div>
         </div>

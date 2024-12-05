@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Список задач с включенным фильтром не содержит выполненные задачи после нажатия на кнопку фильтрации-вариант через снапшот 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -4,33 +4,10 @@
+    >
+      <li
+        class="item-wrapper"
+      >
+        <input
+-         checked=""
+-         id="0"
+-         type="checkbox"
+-       />
+-       <label
+-         for="0"
+-       >
+-         mock0
+-       </label>
+-       <button
+-         class="button button-with-icon"
+-         data-alt="Удалить"
+-       >
+-         <img
+-           alt="Удалить"
+-           src="[object Object]"
+-         />
+-       </button>
+-     </li>
+-     <li
+-       class="item-wrapper"
+-     >
+-       <input
+          id="1"
+          type="checkbox"
+        />
+        <label
+          for="1"
+@@ -39,56 +16,10 @@
+        </label>
+        <button
+          class="button button-with-icon"
+          data-alt="Удалить"
+          disabled=""
+-       >
+-         <img
+-           alt="Удалить"
+-           src="[object Object]"
+-         />
+-       </button>
+-     </li>
+-     <li
+-       class="item-wrapper"
+-     >
+-       <input
+-         checked=""
+-         id="2"
+-         type="checkbox"
+-       />
+-       <label
+-         for="2"
+-       >
+-         mock2
+-       </label>
+-       <button
+-         class="button button-with-icon"
+-         data-alt="Удалить"
+-       >
+-         <img
+-           alt="Удалить"
+-           src="[object Object]"
+-         />
+-       </button>
+-     </li>
+-     <li
+-       class="item-wrapper"
+-     >
+-       <input
+-         checked=""
+-         id="3"
+-         type="checkbox"
+-       />
+-       <label
+-         for="3"
+-       >
+-         mock3
+-       </label>
+-       <button
+-         class="button button-with-icon"
+-         data-alt="Удалить"
+        >
+          <img
+            alt="Удалить"
+            src="[object Object]"
+          />"
+`;

@@ -10,12 +10,12 @@ expect.extend({
     toMatchDiffSnapshot
 });
 
-jest.mock('src/utils/helpers', () => ({
-    ...jest.requireActual('src/utils/helpers'),
-    sayHi: jest.fn(() => 'Привет!'),
-}));
+// jest.mock('src/utils/helpers', () => ({
+//     ...jest.requireActual('src/utils/helpers'),
+//     sayHi: jest.fn(() => 'Привет2!'),
+// }));
 
-jest.useFakeTimers();
+jest.useFakeTimers()
 
 const cryptoMock = {
     randomUUID: jest.fn(() => Math.random().toString()),

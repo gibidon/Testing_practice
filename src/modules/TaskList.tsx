@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Empty } from "src/components/Empty";
 import { List } from "src/components/List";
+import { useFilters } from "src/hooks/useFilters";
 import { deleteTask, tasksSelector, toggleTask } from "src/store/taskSlice";
 
 export const TaskList = () => {
@@ -15,8 +16,10 @@ export const TaskList = () => {
     dispatch(toggleTask(id));
   };
 
+  const filteredItems = useFilters(items)  
+
   return items.length > 0 ? (
-    <List items={items} onDelete={handleDelete} onToggle={handleToggle} />
+    <List items={filteredItems} onDelete={handleDelete} onToggle={handleToggle} />
   ) : (
     <Empty />
   );

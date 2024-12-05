@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Элемент списка задач заполняется 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -2,17 +2,17 @@
+    <li
+      class="item-wrapper"
+    >
+      <input
+        checked=""
+-       id="6"
++       id="7"
+        type="checkbox"
+      />
+      <label
+-       for="6"
++       for="7"
+      >
+-       some normal string
++       some normal stringnew
+      </label>
+      <button
+        class="button button-with-icon"
+        data-alt="Удалить"
+      >"
+`;
+
+exports[`Элемент списка задач заполняется корректно-через diffSnapshot 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -2,17 +2,17 @@
+    <li
+      class="item-wrapper"
+    >
+      <input
+        checked=""
+-       id="6"
++       id="7"
+        type="checkbox"
+      />
+      <label
+-       for="6"
++       for="7"
+      >
+-       some normal string
++       some normal stringnew
+      </label>
+      <button
+        class="button button-with-icon"
+        data-alt="Удалить"
+      >"
+`;
+
+exports[`Элемент списка задач заполняется корректно-через snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="item-wrapper"
+  >
+    <input
+      checked=""
+      id="6"
+      type="checkbox"
+    />
+    <label
+      for="6"
+    >
+      some normal string
+    </label>
+    <button
+      class="button button-with-icon"
+      data-alt="Удалить"
+    >
+      <img
+        alt="Удалить"
+        src="[object Object]"
+      />
+    </button>
+  </li>
+</DocumentFragment>
+`;
